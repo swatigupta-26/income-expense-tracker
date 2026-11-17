@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finora. | Personal Finance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">✦</span>
+                <span>finora<span class="brand-dot">.</span></span>
+            </div>
+
+            <p class="menu-label">WORKSPACE</p>
+
+            <nav class="navigation">
+                <a href="#overview" class="nav-link active">
+                    <span>▦</span> Overview
+                </a>
+                <a href="#add-transaction" class="nav-link">
+                    <span>＋</span> Add Transaction
+                </a>
+                <a href="#transactions" class="nav-link">
+                    <span>⇄</span> Transactions
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-note">
+                    <span class="note-icon">✧</span>
+                    <h3>Smart money habits</h3>
+                    <p>Small savings today create a better tomorrow.</p>
+                </div>
+                <p class="sidebar-footer">PERSONAL FINANCE TRACKER</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">PERSONAL FINANCE</p>
+                    <h1>My Dashboard <span>✦</span></h1>
+                    <p class="welcome-text">Welcome back! Here's your financial overview.</p>
+                </div>
+                <div class="profile">
+                    <div class="profile-avatar">M</div>
+                    <div>
+                        <strong>My Wallet</strong>
+                        <small>Personal account</small>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-section" id="overview">
+                <div class="section-heading">
+                    <div>
+                        <h2>Financial Overview</h2>
+                        <p>Keep track of where your money goes.</p>
+                    </div>
+                    <span class="period-label">✦ All Time</span>
+                </div>
+
+                <div class="summary-cards">
+
+                    <article class="summary-card income-card">
+                        <div class="card-top">
+                            <span class="card-icon">↗</span>
+                            <span class="card-label">TOTAL INCOME</span>
+                        </div>
+                        <h2 id="total-income">₹0.00</h2>
+                        <p class="card-description">Money received</p>
+                    </article>
+
+                    <article class="summary-card expense-card">
+                        <div class="card-top">
+                            <span class="card-icon">↘</span>
+                            <span class="card-label">TOTAL EXPENSES</span>
+                        </div>
+                        <h2 id="total-expenses">₹0.00</h2>
+                        <p class="card-description">Money spent</p>
+                    </article>
+
+                    <article class="summary-card balance-card">
+                        <div class="card-top">
+                            <span class="card-icon">◈</span>
+                            <span class="card-label">AVAILABLE BALANCE</span>
+                        </div>
+                        <h2 id="balance">₹0.00</h2>
+                        <p class="card-description">Your current balance</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="form-section" id="add-transaction">
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-kicker">MONEY ACTIVITY</span>
+                        <h2>Add New Transaction</h2>
+                        <p>Enter your income or expense details below.</p>
+                    </div>
+                    <div class="heading-icon">＋</div>
+                </div>
+
+                <form id="transaction-form">
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description"
+                            placeholder="e.g. Monthly salary" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount (₹)</label>
+                        <input type="number" id="amount"
+                            placeholder="Enter amount" min="0.01"
+                            step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Transaction Type</label>
+                        <select id="type" required>
+                            <option value="">Select type</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option value="Salary">Salary</option>
+                            <option value="Business">Business</option>
+                            <option value="Food">Food</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Education">Education</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group date-group">
+                        <label for="date">Transaction Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <p id="error-message" role="alert"></p>
+
+                    <button type="submit" class="add-btn">
+                        <span>＋</span> Add Transaction
+                    </button>
+
+                </form>
+            </section>
+
+            <section class="transactions-section" id="transactions">
+                <div class="section-heading transaction-heading">
+                    <div>
+                        <span class="panel-kicker">YOUR ACTIVITY</span>
+                        <h2>Recent Transactions</h2>
+                        <p>Your income and expense history.</p>
+                    </div>
+                    <span class="history-icon">⇄</span>
+                </div>
+
+                <div id="transaction-list">
+                    <p class="empty-message">
+                        <span class="empty-icon">◈</span>
+                        <strong>No transactions yet</strong>
+                        Your transactions will appear here once you add them.
+                    </p>
+                </div>
+            </section>
+
+            <footer>
+                <p>Made with care <span>♥</span> · Finora Personal Finance Tracker</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
