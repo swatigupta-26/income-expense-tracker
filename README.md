@@ -61,7 +61,7 @@ AI tools were used for learning assistance, debugging, understanding concepts, a
 
 **Your Name**
 
-GitHub: YOUR_GITHUB_PROFILE_URL
+GitHub: swatigupta-26
 
 ---
 
